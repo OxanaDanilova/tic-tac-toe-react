@@ -1,0 +1,28 @@
+section {
+  max-width: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.first-user-panel,
+.second-user-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-user-panel > p,
+.second-user-panel > p {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.first-user-panel > p:first-child {
+  color: rgb(207, 37, 37);
+  text-decoration: underline;
+}
+
+.second-user-panel > p:first-child {
+  color: rgb(90, 183, 56);
+}
