@@ -1,0 +1,16 @@
+.board {
+  width: 600px;
+  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: rgb(188, 202, 243);
+  border: 2px solid royalblue;
+  margin: 10vh auto;
+}
+
+.board div {
+  width: 200px;
+  aspect-ratio: 1;
+  border: 1px solid royalblue;
+  box-sizing: border-box;
+}
