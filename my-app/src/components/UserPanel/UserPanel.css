@@ -1,9 +1,16 @@
-section {
+.user-panel {
   max-width: 600px;
+  max-height: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
+  margin: 20px auto;
+}
+
+.score-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .first-user-panel,
@@ -12,17 +19,20 @@ section {
   flex-direction: column;
 }
 
-.first-user-panel > p,
-.second-user-panel > p {
+.first-user-panel > *,
+.second-user-panel > * {
   font-weight: 600;
   font-size: 1.5rem;
 }
 
-.first-user-panel > p:first-child {
+.first-user-panel > * {
   color: rgb(207, 37, 37);
+}
+
+.first-user-name {
   text-decoration: underline;
 }
 
-.second-user-panel > p:first-child {
+.second-user-panel > * {
   color: rgb(90, 183, 56);
 }
