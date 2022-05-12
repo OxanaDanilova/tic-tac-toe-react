@@ -13,4 +13,8 @@
   aspect-ratio: 1;
   border: 1px solid royalblue;
   box-sizing: border-box;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

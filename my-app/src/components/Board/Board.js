@@ -7,20 +7,30 @@ export class Board extends React.Component {
     super();
     this.state = {
       gameStatus: "x",
-      boardArr: ["x", "o", "", "", "x", "o", "", "", "x"],
+      boardArr: ["", "", "", "", "x", "o", "", "", "x"],
     };
   }
-  clickHandle(e) {
+  clickHandle(e, { gameStatus, boardArr }) {
     if (e.target.id) {
-      console.log(e.target);
-      //e.target.innerHTML = this.state.gameStatus;
-
-      //this.gameStatus = this.gameStatus === "x" ? "o" : "x";
+      let index = e.target.id;
+      if (boardArr[index] === "") {
+        console.log(e.target);
+        e.target.innerHTML = gameStatus;
+        boardArr[index] = gameStatus;
+        gameStatus = gameStatus === "x" ? "o" : "x";
+        this.setState({
+          gameStatus: gameStatus,
+          boardArr: boardArr,
+        });
+      }
     }
   }
   render() {
     return (
-      <section onClick={this.clickHandle} className="board">
+      <section
+        onClick={(e) => this.clickHandle(e, this.state)}
+        className="board"
+      >
         {this.state.boardArr.map(
           (el, i) =>
             (el = (
