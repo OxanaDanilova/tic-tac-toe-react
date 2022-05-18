@@ -18,3 +18,11 @@
   justify-content: center;
   align-items: center;
 }
+
+.first-user-color {
+  color: rgb(207, 37, 37);
+}
+
+.second-user-color {
+  color: rgb(90, 183, 56);
+}

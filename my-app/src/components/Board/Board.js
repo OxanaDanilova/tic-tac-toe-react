@@ -62,7 +62,7 @@ export class Board extends React.Component {
     )
       winner = boardArr[2];
     if (winner) {
-      console.log(`Game is finished. The winner is ${winner}`);
+      alert(`Game is finished. The winner is ${winner}`);
       this.setState({ winner: winner });
     }
   }
@@ -73,6 +73,9 @@ export class Board extends React.Component {
         if (boardArr[index] === "") {
           console.log(e.target);
           e.target.innerHTML = gameStatus;
+          e.target.classList.add(
+            gameStatus === "x" ? "first-user-color" : "second-user-color"
+          );
           boardArr[index] = gameStatus;
           gameStatus = gameStatus === "x" ? "o" : "x";
           this.setState({
