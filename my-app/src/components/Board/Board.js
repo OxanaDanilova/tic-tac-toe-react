@@ -1,4 +1,5 @@
 import React from "react";
+import { FinishGamePopup } from "../FinishGamePopup/FinishGamePopup";
 
 import "./Board.css";
 
@@ -9,6 +10,7 @@ export class Board extends React.Component {
       gameStatus: "x",
       boardArr: ["", "", "", "", "", "", "", "", ""],
       winner: [],
+      isFinished: false,
     };
   }
   isFinished(boardArr) {
@@ -62,8 +64,9 @@ export class Board extends React.Component {
     )
       winner.push(2, 4, 6);
     if (winner.length) {
-      console.log(`Game is finished. The winner is ${boardArr[winner[0]]}`);
+      console.log(`Game over. The winner is ${boardArr[winner[0]]}`);
       this.setState({ winner: winner });
+      this.setState({ isFinished: true });
       winner.forEach((elem) => {
         if (document.querySelectorAll(".board>div")[`${elem}`]) {
           const box = document.querySelectorAll(".board>div")[`${elem}`];
@@ -71,7 +74,8 @@ export class Board extends React.Component {
         }
       });
     } else if (!boardArr.includes("")) {
-      alert("Game is finished!");
+      console.log("Game over");
+      this.setState({ isFinished: true });
     }
   }
   clickHandle(e, { gameStatus, boardArr, winner }) {
@@ -95,7 +99,21 @@ export class Board extends React.Component {
       }
     }
   }
+  startNewGame() {
+    this.setState({
+      gameStatus: "x",
+      boardArr: ["", "", "", "", "", "", "", "", ""],
+      winner: [],
+      isFinished: false,
+    });
+    const boxes = document.querySelectorAll(".board>div");
+    boxes.forEach((box) => (box.classList = ""));
+  }
   render() {
+    let popup;
+    if (this.state.isFinished) {
+      popup = <FinishGamePopup newGame={() => this.startNewGame()} />;
+    }
     return (
       <section
         onClick={(e) => this.clickHandle(e, this.state)}
@@ -109,6 +127,7 @@ export class Board extends React.Component {
               </div>
             ))
         )}
+        {popup}
       </section>
     );
   }

@@ -7,17 +7,18 @@ export class FinishGamePopup extends React.Component {
     popup.classList.add("hide");
   }
   startNewGame() {
-    console.log("this", this);
     this.closePopup();
+    console.log("this", this);
+    console.log("props", this.props.newGame());
   }
   render() {
     return (
       <section className="fin-popup">
-        <p>Game is finished!</p>
-        <button onClick={this.closePopup} className="close-btn">
+        <p>Game over!</p>
+        <button onClick={() => this.closePopup()} className="close-btn">
           x
         </button>
-        <button onClick={this.startNewGame} className="new-game-btn">
+        <button onClick={() => this.startNewGame()} className="new-game-btn">
           New game
         </button>
       </section>
