@@ -1,6 +1,5 @@
 .board {
   width: 600px;
-  width: 600px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: rgb(188, 202, 243);
@@ -25,4 +24,8 @@
 
 .second-user-color {
   color: rgb(90, 183, 56);
+}
+
+.win-color {
+  background-color: darkblue;
 }

@@ -1,0 +1,40 @@
+.fin-popup {
+  width: 450px;
+  height: 300px;
+  background-color: lightseagreen;
+  color: white;
+  position: absolute;
+  top: calc(50%);
+  left: calc(50% - 225px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.new-game-btn {
+  padding: 0.25rem;
+  background-color: brown;
+  color: antiquewhite;
+  border-radius: 0.25rem;
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hide {
+  display: none;
+}
