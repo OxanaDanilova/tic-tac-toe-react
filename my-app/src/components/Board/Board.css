@@ -18,6 +18,7 @@
   justify-content: center;
   align-items: center;
   text-shadow: 5px 2px 3px #7c5858;
+  cursor: pointer;
 }
 
 .first-user-color {
