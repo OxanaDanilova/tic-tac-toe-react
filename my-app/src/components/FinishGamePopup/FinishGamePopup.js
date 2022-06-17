@@ -12,9 +12,18 @@ export class FinishGamePopup extends React.Component {
     console.log("props", this.props.newGame());
   }
   render() {
+    let message = "";
+    if (this.props.winner) {
+      if (this.props.winner === "x") {
+        message = "The winner is User 1 (x)";
+      } else {
+        message = "The winner is User 2 (o)";
+      }
+    }
     return (
       <section className="fin-popup">
         <p>Game over!</p>
+        <p>{message}</p>
         <button onClick={() => this.closePopup()} className="close-btn">
           x
         </button>

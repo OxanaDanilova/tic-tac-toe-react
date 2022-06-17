@@ -112,7 +112,12 @@ export class Board extends React.Component {
   render() {
     let popup;
     if (this.state.isFinished) {
-      popup = <FinishGamePopup newGame={() => this.startNewGame()} />;
+      popup = (
+        <FinishGamePopup
+          newGame={() => this.startNewGame()}
+          winner={this.state.boardArr[this.state.winner[0]]}
+        />
+      );
     }
     return (
       <section
