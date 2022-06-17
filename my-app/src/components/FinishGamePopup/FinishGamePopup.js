@@ -15,9 +15,9 @@ export class FinishGamePopup extends React.Component {
     let message = "";
     if (this.props.winner) {
       if (this.props.winner === "x") {
-        message = "The winner is User 1 (x)";
+        message = "Congratulations! The winner is User 1 (x)";
       } else {
-        message = "The winner is User 2 (o)";
+        message = "Congratulations! The winner is User 2 (o)";
       }
     }
     return (
