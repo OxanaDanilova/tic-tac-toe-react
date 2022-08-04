@@ -13,6 +13,15 @@ export class Board extends React.Component {
       isFinished: false,
     };
   }
+  addScore = (winner) => {
+    console.log("vnimanie, winner: ", winner);
+    console.log(this.props);
+    if (winner === "x") {
+      this.props.addScoreX();
+    } else {
+      this.props.addScoreO();
+    }
+  };
   isFinished(boardArr) {
     const winner = [];
     if (
@@ -64,9 +73,10 @@ export class Board extends React.Component {
     )
       winner.push(2, 4, 6);
     if (winner.length) {
-      console.log(`Game over. The winner is ${boardArr[winner[0]]}`);
+      console.log(`The winner is ${boardArr[winner[0]]}`);
       this.setState({ winner: winner });
       this.setState({ isFinished: true });
+      this.addScore(boardArr[winner[0]]);
       winner.forEach((elem) => {
         if (document.querySelectorAll(".board>div")[`${elem}`]) {
           const box = document.querySelectorAll(".board>div")[`${elem}`];

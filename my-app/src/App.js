@@ -11,6 +11,13 @@ class App extends React.Component {
       userSecondScore: 0,
     };
   }
+  addScoreX() {
+    this.setState({ userFirstScore: this.state.userFirstScore + 100 });
+  }
+  addScoreO() {
+    this.setState({ userSecondScore: this.state.userSecondScore + 100 });
+  }
+
   render() {
     return (
       <div className="App">
@@ -19,7 +26,10 @@ class App extends React.Component {
           userFirstScore={this.state.userFirstScore}
           userSecondScore={this.state.userSecondScore}
         />
-        <Board />
+        <Board
+          addScoreX={() => this.addScoreX()}
+          addScoreO={() => this.addScoreO()}
+        />
       </div>
     );
   }
