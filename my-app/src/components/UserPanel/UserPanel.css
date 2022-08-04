@@ -1,22 +1,23 @@
 .user-panel {
   max-width: 600px;
-  max-height: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .score-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  width: 8rem;
 }
 
 .first-user-panel,
 .second-user-panel {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .first-user-panel > *,
@@ -31,8 +32,26 @@
 
 .first-user-name {
   text-decoration: underline;
+  padding: 1rem;
+  font-size: 2rem;
+  box-shadow: 5px 5px 5px rgb(151, 26, 26);
+  border: 2px solid rgb(207, 37, 37);
+  border-radius: 0.5rem;
+  width: 3rem;
+  margin: 0;
 }
 
 .second-user-panel > * {
   color: rgb(90, 183, 56);
+}
+
+.second-user-name {
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 2rem;
+  box-shadow: 5px 5px 5px rgb(73, 151, 45);
+  border: 2px solid rgb(90, 183, 56);
+  border-radius: 0.5rem;
+  width: 3rem;
+  margin: 0;
 }

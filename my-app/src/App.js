@@ -20,7 +20,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <h1>Tic-Tac-Toe</h1>
         <UserPanel
           userFirstScore={this.state.userFirstScore}
