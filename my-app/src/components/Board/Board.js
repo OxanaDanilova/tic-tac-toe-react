@@ -100,8 +100,8 @@ export class Board extends React.Component {
           );
           boardArr[index] = gameStatus;
           gameStatus = gameStatus === "x" ? "o" : "x";
-          console.log(this.props);
-          this.props.active();
+          this.props.active(gameStatus);
+
           this.setState({
             gameStatus: gameStatus,
             boardArr: boardArr,
@@ -120,6 +120,7 @@ export class Board extends React.Component {
     });
     const boxes = document.querySelectorAll(".board>div");
     boxes.forEach((box) => (box.classList = ""));
+    this.props.active("x");
   }
   render() {
     let popup;

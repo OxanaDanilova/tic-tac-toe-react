@@ -18,10 +18,11 @@ class App extends React.Component {
   addScoreO() {
     this.setState({ userSecondScore: this.state.userSecondScore + 100 });
   }
-  changeActive() {
-    this.state.active === "x"
-      ? this.setState({ active: "o" })
-      : this.setState({ active: "x" });
+  changeActive(activeUser) {
+    console.log("active user", activeUser);
+    activeUser === "x"
+      ? this.setState({ active: "x" })
+      : this.setState({ active: "o" });
   }
 
   render() {
@@ -36,7 +37,7 @@ class App extends React.Component {
         <Board
           addScoreX={() => this.addScoreX()}
           addScoreO={() => this.addScoreO()}
-          active={() => this.changeActive()}
+          active={(x) => this.changeActive(x)}
         />
       </div>
     );
