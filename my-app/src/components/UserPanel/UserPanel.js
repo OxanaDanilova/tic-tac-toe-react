@@ -7,8 +7,8 @@ export class UserPanel extends React.Component {
   render() {
     return (
       <section className="user-panel">
-        <FirstUserPanel />
-        <SecondUserPanel />
+        <FirstUserPanel score={this.props.userFirstScore} />
+        <SecondUserPanel score={this.props.userSecondScore} />
       </section>
     );
   }

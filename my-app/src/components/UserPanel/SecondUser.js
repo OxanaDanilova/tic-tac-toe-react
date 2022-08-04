@@ -7,7 +7,7 @@ export class SecondUserPanel extends React.Component {
         <p className="second-user-name">User 2</p>
         <div className="score-wrapper">
           <p>Score: </p>
-          <p className="second-user-score">0</p>
+          <p className="second-user-score">{this.props.score}</p>
         </div>
       </section>
     );
