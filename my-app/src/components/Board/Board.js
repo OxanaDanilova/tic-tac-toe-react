@@ -100,6 +100,8 @@ export class Board extends React.Component {
           );
           boardArr[index] = gameStatus;
           gameStatus = gameStatus === "x" ? "o" : "x";
+          console.log(this.props);
+          this.props.active();
           this.setState({
             gameStatus: gameStatus,
             boardArr: boardArr,
