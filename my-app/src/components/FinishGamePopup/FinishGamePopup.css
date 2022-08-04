@@ -18,6 +18,8 @@
 p {
   font-size: 1.5rem;
   font-weight: 600;
+  margin: 1rem;
+  padding: 0;
 }
 
 .new-game-btn {
@@ -33,4 +35,40 @@ p {
 
 .hide {
   display: none;
+}
+
+.balloons {
+  width: 20rem;
+  height: 20rem;
+  background: url(../../../public/images/balloons.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  opacity: 0;
+  animation: go-up 5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s none;
+}
+.left {
+  left: -50%;
+}
+.right {
+  right: -50%;
+}
+@keyframes go-up {
+  from {
+    transform: translateY(90%);
+    opacity: 50%;
+  }
+
+  to {
+    transform: translateY(calc(-100vh));
+    opacity: 100%;
+  }
+}
+
+.prize {
+  font-size: 4rem;
+  color: gold;
+  margin: 0;
+  padding: 0;
 }

@@ -18,11 +18,22 @@ export class FinishGamePopup extends React.Component {
     }
     return (
       <section className="fin-popup">
-        <p>{message ? "" : "Game over!"}</p>
+        <p>
+          {message ? (
+            <i className="fa-solid fa-trophy prize"></i>
+          ) : (
+            "There is no winner."
+          )}
+        </p>
         <p>{message}</p>
         <button onClick={() => this.startNewGame()} className="new-game-btn">
           New game
         </button>
+
+        {message && [
+          <figure className="balloons left"></figure>,
+          <figure className="balloons right"></figure>,
+        ]}
       </section>
     );
   }
