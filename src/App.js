@@ -19,7 +19,6 @@ class App extends React.Component {
     this.setState({ userSecondScore: this.state.userSecondScore + 100 });
   }
   changeActive(activeUser) {
-    console.log("active user", activeUser);
     activeUser === "x"
       ? this.setState({ active: "x" })
       : this.setState({ active: "o" });
