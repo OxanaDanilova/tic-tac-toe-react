@@ -12,7 +12,7 @@ export class FirstUserPanel extends React.Component {
           X
         </p>
         <div className="score-wrapper">
-          <p>Score: </p>
+          <p>Score:</p>
           <p className="first-user-score">{this.props.score}</p>
         </div>
       </section>

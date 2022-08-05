@@ -14,8 +14,6 @@ export class Board extends React.Component {
     };
   }
   addScore = (winner) => {
-    console.log("vnimanie, winner: ", winner);
-    console.log(this.props);
     if (winner === "x") {
       this.props.addScoreX();
     } else {
@@ -73,7 +71,6 @@ export class Board extends React.Component {
     )
       winner.push(2, 4, 6);
     if (winner.length) {
-      console.log(`The winner is ${boardArr[winner[0]]}`);
       this.setState({ winner: winner });
       this.setState({ isFinished: true });
       this.addScore(boardArr[winner[0]]);
@@ -84,7 +81,6 @@ export class Board extends React.Component {
         }
       });
     } else if (!boardArr.includes("")) {
-      console.log("Game over");
       this.setState({ isFinished: true });
     }
   }
@@ -93,7 +89,6 @@ export class Board extends React.Component {
       if (e.target.id) {
         let index = e.target.id;
         if (boardArr[index] === "") {
-          console.log(e.target);
           e.target.innerHTML = gameStatus;
           e.target.classList.add(
             gameStatus === "x" ? "first-user-color" : "second-user-color"

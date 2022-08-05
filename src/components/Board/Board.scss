@@ -5,22 +5,41 @@ $base-color: royalblue;
   width: 600px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color: rgb(188, 202, 243);
-  border: 4px solid $base-color;
   margin: 1rem auto;
   border-radius: 1rem;
   div {
     width: 200px;
     aspect-ratio: 1;
-    border: 1px solid $base-color;
+    border: 3px solid $base-color;
     box-sizing: border-box;
-    font-size: 8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 9rem;
     text-shadow: 5px 2px 3px #7c5858;
     cursor: pointer;
   }
+}
+
+.board > div:nth-child(1),
+.board > div:nth-child(4),
+.board > div:nth-child(7) {
+  border-left: none;
+}
+
+.board > div:nth-child(1),
+.board > div:nth-child(2),
+.board > div:nth-child(3) {
+  border-top: none;
+}
+
+.board > div:nth-child(3),
+.board > div:nth-child(6),
+.board > div:nth-child(9) {
+  border-right: none;
+}
+
+.board > div:nth-child(7),
+.board > div:nth-child(8),
+.board > div:nth-child(9) {
+  border-bottom: none;
 }
 
 .first-user-color {
@@ -42,5 +61,24 @@ $base-color: royalblue;
   }
   100% {
     transform: rotate3d(1, 1, 0, 360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .board {
+    width: 450px;
+    div {
+      width: 150px;
+      font-size: 5rem;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .board {
+    width: 300px;
+    div {
+      width: 100px;
+    }
   }
 }

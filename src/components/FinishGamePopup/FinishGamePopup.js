@@ -31,8 +31,8 @@ export class FinishGamePopup extends React.Component {
         </button>
 
         {message && [
-          <figure className="balloons left"></figure>,
-          <figure className="balloons right"></figure>,
+          <figure key="1" className="balloons left"></figure>,
+          <figure key="2" className="balloons right"></figure>,
         ]}
       </section>
     );

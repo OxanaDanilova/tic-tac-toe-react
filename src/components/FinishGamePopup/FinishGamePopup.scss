@@ -3,7 +3,7 @@
   background-color: ghostwhite;
   color: royalblue;
   position: absolute;
-  top: calc(40%);
+  top: calc(35%);
   left: calc(50% - 225px);
   display: flex;
   flex-direction: column;
@@ -11,8 +11,7 @@
   align-items: center;
   border-radius: 1rem;
   box-shadow: 5px 5px 5px 5px rgb(35, 74, 192);
-  border: 2px solid royalblue;
-  padding: 5px;
+  padding: 1rem;
 }
 
 p {
@@ -27,10 +26,11 @@ p {
   background-color: darkblue;
   color: antiquewhite;
   border-radius: 0.5rem;
-  width: 120px;
-  height: 40px;
+  width: 125px;
+  height: 45px;
   cursor: pointer;
   font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .hide {
@@ -71,4 +71,14 @@ p {
   color: gold;
   margin: 0;
   padding: 0;
+  text-shadow: 2px 3px goldenrod;
+}
+
+@media (max-width: 450px) {
+  .fin-popup {
+    width: 300px;
+    top: calc(30%);
+    left: calc(50% - 150px);
+    padding: 0.8rem;
+  }
 }
