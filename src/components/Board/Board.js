@@ -1,7 +1,7 @@
 import React from "react";
 import { FinishGamePopup } from "../FinishGamePopup/FinishGamePopup";
 
-import "./Board.css";
+import "./Board.scss";
 
 export class Board extends React.Component {
   constructor() {

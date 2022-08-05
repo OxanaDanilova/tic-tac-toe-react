@@ -1,7 +1,7 @@
 import React from "react";
 import { FirstUserPanel } from "./FirstUser";
 import { SecondUserPanel } from "./SecondUser";
-import "./UserPanel.css";
+import "./UserPanel.scss";
 
 export class UserPanel extends React.Component {
   render() {
