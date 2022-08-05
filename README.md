@@ -4,13 +4,13 @@
 
 ---
 
-![chrono](./public/images/tic-tac-toe-demo.png)
+![tic-tac-toe](./public/images/win.png)
 
 ## Description
 
 This project was created based on [Create React App](https://github.com/facebook/create-react-app).
 
-Tic-tac-toe is a game in which two players take turns in drawing either an 'O' or an 'X' in one square of a grid consisting of nine squares. The winner is the first player to get three of the same symbols in a row.
+Tic-tac-toe is a game in which two players take turns in drawing either an 'O' or an 'X' in one square of a grid consisting of nine squares. The winner is the first player to get three of the same symbols in a row. The winner gets 100 points.
 
 ---
 
