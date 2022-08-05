@@ -1,5 +1,5 @@
 import React from "react";
-import "./FinishGamePopup.css";
+import "./FinishGamePopup.scss";
 
 export class FinishGamePopup extends React.Component {
   startNewGame() {
