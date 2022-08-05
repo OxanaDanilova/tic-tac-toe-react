@@ -1,3 +1,6 @@
+$x-color: rgb(207, 37, 37);
+$o-color: rgb(90, 183, 56);
+$base-color: royalblue;
 .user-panel {
   max-width: 600px;
   display: flex;
@@ -27,7 +30,7 @@
 }
 
 .first-user-panel {
-  color: rgb(207, 37, 37);
+  color: $x-color;
 }
 
 .first-user-name {
@@ -35,8 +38,8 @@
   text-decoration: underline;
   font-size: 2rem;
   box-shadow: 5px 5px 5px rgb(151, 26, 26);
-  border: 2px solid rgb(207, 37, 37);
-  background-color: rgb(207, 37, 37);
+  border: 2px solid $x-color;
+  background-color: $x-color;
   color: white;
   border-radius: 0.5rem;
   width: 3rem;
@@ -44,7 +47,7 @@
 }
 
 .second-user-panel {
-  color: rgb(90, 183, 56);
+  color: $o-color;
 }
 
 .second-user-name {
@@ -52,9 +55,9 @@
   text-decoration: underline;
   font-size: 2rem;
   box-shadow: 5px 5px 5px rgb(73, 151, 45);
-  background-color: rgb(90, 183, 56);
+  background-color: $x-color;
   color: white;
-  border: 2px solid rgb(90, 183, 56);
+  border: 2px solid $x-color;
   border-radius: 0.5rem;
   width: 3rem;
   margin: 0;

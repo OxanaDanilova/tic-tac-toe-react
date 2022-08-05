@@ -1,32 +1,34 @@
+$x-color: rgb(207, 37, 37);
+$o-color: rgb(90, 183, 56);
+$base-color: royalblue;
 .board {
   width: 600px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: rgb(188, 202, 243);
-  border: 4px solid royalblue;
+  border: 4px solid $base-color;
   margin: 1rem auto;
   border-radius: 1rem;
-}
-
-.board div {
-  width: 200px;
-  aspect-ratio: 1;
-  border: 1px solid royalblue;
-  box-sizing: border-box;
-  font-size: 8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 5px 2px 3px #7c5858;
-  cursor: pointer;
+  div {
+    width: 200px;
+    aspect-ratio: 1;
+    border: 1px solid $base-color;
+    box-sizing: border-box;
+    font-size: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 5px 2px 3px #7c5858;
+    cursor: pointer;
+  }
 }
 
 .first-user-color {
-  color: rgb(207, 37, 37);
+  color: $x-color;
 }
 
 .second-user-color {
-  color: rgb(90, 183, 56);
+  color: $o-color;
 }
 
 .win-color {
