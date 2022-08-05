@@ -13,7 +13,7 @@ $base-color: royalblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 8rem;
+  /*   max-width: 8rem; */
 }
 
 .first-user-panel,
@@ -69,4 +69,17 @@ $base-color: royalblue;
   text-decoration: none;
   transform: scale(0.8);
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media (max-width: 450px) {
+  .first-user-panel > *,
+  .second-user-panel > * {
+    font-size: 1rem;
+  }
+  .first-user-name,
+  .second-user-name {
+    padding: 0.6rem;
+    font-size: 1.5rem;
+    width: 2rem;
+  }
 }

@@ -63,3 +63,22 @@ $base-color: royalblue;
     transform: rotate3d(1, 1, 0, 360deg);
   }
 }
+
+@media (max-width: 600px) {
+  .board {
+    width: 450px;
+    div {
+      width: 150px;
+      font-size: 5rem;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .board {
+    width: 300px;
+    div {
+      width: 100px;
+    }
+  }
+}
